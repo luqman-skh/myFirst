@@ -1,0 +1,122 @@
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit$ mkdir iseGit2
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit$ cd iseGit2/
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git init
+Initialized empty Git repository in /home/arcanin3/FOSS/luqGit/iseGit2/.git/
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ touch iseDemo.txt
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ ls
+iseDemo.txt
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	iseDemo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git add iseDemo.txt 
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   iseDemo.txt
+
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git commit -m "First commit for luq"
+[master (root-commit) 03d9330] First commit for luq
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 iseDemo.txt
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git branch
+* master
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git checkout -b masterFeature2luq
+Switched to a new branch 'masterFeature2luq'
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git branch
+  master
+* masterFeature2luq
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git remote add origin https://github.com/luqman-skh/myFirst.git
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git push -u origin master
+Username for 'https://github.com': luqman-skh
+Password for 'https://luqman-skh@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/luqman-skh/myFirst.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git push origin 
+HEAD                master              masterFeature2luq   origin/master       
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git push origin masterFeature2luq 
+Username for 'https://github.com': luqman-skh
+Password for 'https://luqman-skh@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'masterFeature2luq' on GitHub by visiting:
+remote:      https://github.com/luqman-skh/myFirst/pull/new/masterFeature2luq
+remote: 
+To https://github.com/luqman-skh/myFirst.git
+ * [new branch]      masterFeature2luq -> masterFeature2luq
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ gedit 
+.git/        iseDemo.txt  
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ gedit iseDemo.txt 
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git branchs
+git: 'branchs' is not a git command. See 'git --help'.
+
+The most similar command is
+	branch
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git branch
+  master
+* masterFeature2luq
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git push origin masterFeature2luq 
+Username for 'https://github.com': luqman-skh
+Password for 'https://luqman-skh@github.com': 
+Everything up-to-date
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git add iseDemo.txt 
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git commit -m "second"
+[masterFeature2luq a5da7d5] second
+ 1 file changed, 1 insertion(+)
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git push origin masterFeature2luq 
+Username for 'https://github.com': luqman-skh
+Password for 'https://luqman-skh@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 268 bytes | 268.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/luqman-skh/myFirst.git
+   03d9330..a5da7d5  masterFeature2luq -> masterFeature2luq
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git pull origin master
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/luqman-skh/myFirst
+ * branch            master     -> FETCH_HEAD
+   03d9330..6c6629d  master     -> origin/master
+Updating a5da7d5..6c6629d
+Fast-forward
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ cat iseDemo.txt 
+heheheyteyaof;likjas;dkfjalsz
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git branch
+  master
+* masterFeature2luq
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git checkout master
+Switched to branch 'master'
+Your branch is behind 'origin/master' by 2 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git branch
+* master
+  masterFeature2luq
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ cat iseDemo.txt 
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ git pull  origin master
+From https://github.com/luqman-skh/myFirst
+ * branch            master     -> FETCH_HEAD
+Updating 03d9330..6c6629d
+Fast-forward
+ iseDemo.txt | 1 +
+ 1 file changed, 1 insertion(+)
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ cat iseDemo.txt 
+heheheyteyaof;likjas;dkfjalsz
+arcanin3@arcanin3-Inspiron-5558:~/FOSS/luqGit/iseGit2$ 
